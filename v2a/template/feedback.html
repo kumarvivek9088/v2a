@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1 class="feedback-head">Feedback Form</h1>
+    <div class="feedback-form">
+        <form method="post" action="">
+            {% csrf_token %}
+            <label for="Name" class="feedback-label">Username</label><br>
+            <input type="text" name="name" id="Name" class="feedback-input" placeholder="eg-: aditya bhardwaj" required><br>
+            <label for="Mail" class="feedback-label">E-mail</label><br>
+            <input type="email" name="email" id="Mail" class="feedback-input" placeholder="eg-: vivek@gmail.com" required><br>
+            <label for="Message" class="feedback-label">Give your Feedback below</label><br>
+            <textarea id="Message" rows="10" class="feedback-input feedback-message" name="feedback" required></textarea>
+            <div class="btn-submit">
+                <button type="submit" class="feedback-submit">Submit</button>
+            </div>
+        </form>
+    </div>
+        {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+    <strong>{{ message }}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>

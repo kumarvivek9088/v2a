@@ -1,0 +1,51 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+body{
+    background-image: url("https://www.maxpixel.net/static/photo/1x/Form-Background-2203989.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.feedback-head{
+    font-size: 40px;
+    text-align: center;
+    margin: 30px;color: white;
+}
+.feedback-form{
+    width: 55%;
+    padding: 5px;
+    height: auto;
+    box-sizing: border-box;
+    margin: 50px auto;
+}
+.feedback-label{
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+}
+.feedback-input{
+    width: 100%;
+    height: 30px;
+    margin: 8px 0px;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+}
+.feedback-input:focus{border: 1px solid rgb(1, 150, 231)}
+.feedback-message{
+    height: 100px;
+}
+.btn-submit{text-align: center;margin-top: 20px;}
+.feedback-submit{
+    padding: 15px 35px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: #005050;
+    color: wheat;
+}
+.feedback-submit:hover{cursor: pointer;background-color: #017d7d;outline: none;}
